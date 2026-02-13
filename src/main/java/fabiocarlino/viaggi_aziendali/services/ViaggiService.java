@@ -4,7 +4,9 @@ import fabiocarlino.viaggi_aziendali.entities.Viaggio;
 import fabiocarlino.viaggi_aziendali.payloads.ViaggiDTO;
 import fabiocarlino.viaggi_aziendali.repositories.ViaggiRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ViaggiService {
     private final ViaggiRepo viaggiRepo;
 
