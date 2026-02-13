@@ -26,4 +26,59 @@ public class Prenotazione {
     @ManyToOne
     @JoinColumn(name = "dipendente_id", nullable = false)
     private Dipendente dipendenteId;
+
+    public Prenotazione() {
+    }
+
+    public Prenotazione(String note, Viaggio viaggioId, Dipendente dipendenteId) {
+        this.dataRichiesta = LocalDate.now();
+        this.note = note;
+        this.viaggioId = viaggioId;
+        this.dipendenteId = dipendenteId;
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public LocalDate getDataRichiesta() {
+        return dataRichiesta;
+    }
+
+    public String getNote() {
+        return note;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
+    }
+
+    public Viaggio getViaggioId() {
+        return viaggioId;
+    }
+
+    public void setViaggioId(Viaggio viaggioId) {
+        this.viaggioId = viaggioId;
+    }
+
+    public Dipendente getDipendenteId() {
+        return dipendenteId;
+    }
+
+    public void setDipendenteId(Dipendente dipendenteId) {
+        this.dipendenteId = dipendenteId;
+    }
+
+    @Override
+    public String toString() {
+        return "Prenotazione{" +
+                "id=" + id +
+                ", dataRichiesta=" + dataRichiesta +
+                ", note='" + note + '\'' +
+                ", viaggioId=" + viaggioId +
+                ", dipendenteId=" + dipendenteId +
+                '}';
+    }
 }
+
+

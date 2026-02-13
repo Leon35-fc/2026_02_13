@@ -30,7 +30,7 @@ public class Dipendente {
     public Dipendente() {
     }
 
-    public Dipendente(String nome, String cognome, String username, String avatar, String email) {
+    public Dipendente(String nome, String cognome, String username, String email) {
         this.nome = nome;
         this.cognome = cognome;
         this.username = username;
@@ -82,4 +82,15 @@ public class Dipendente {
         this.email = email;
     }
 
+    @Override
+    public String toString() {
+        return "Dipendente{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", cognome='" + cognome + '\'' +
+                ", username='" + username + '\'' +
+                ", avatar='" + avatar + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }
