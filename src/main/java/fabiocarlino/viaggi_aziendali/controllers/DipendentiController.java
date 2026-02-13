@@ -1,4 +1,4 @@
-package fabiocarlino.viaggi_aziendali.entities.controllers;
+package fabiocarlino.viaggi_aziendali.controllers;
 
 import fabiocarlino.viaggi_aziendali.entities.Dipendente;
 import fabiocarlino.viaggi_aziendali.payloads.DipendenteDTO;
