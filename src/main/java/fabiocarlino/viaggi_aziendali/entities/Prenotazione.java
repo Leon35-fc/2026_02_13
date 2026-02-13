@@ -1,5 +1,6 @@
 package fabiocarlino.viaggi_aziendali.entities;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -14,6 +15,7 @@ public class Prenotazione {
     private UUID id;
 
     @Column(nullable = false)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private LocalDate dataRichiesta;
 
     @Column(nullable = false)

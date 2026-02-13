@@ -1,5 +1,6 @@
 package fabiocarlino.viaggi_aziendali.entities;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -17,6 +18,7 @@ public class Viaggio {
     private String destinazione;
 
     @Column(nullable = false)
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDate data;
 
     @Column(nullable = false)

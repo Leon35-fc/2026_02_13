@@ -12,7 +12,7 @@ public record ViaggiDTO(
         String destinazione,
 
         @NotBlank(message = "Il campo \"data\" non può essere vuoto.")
-        @Size(min = 10, max = 10, message = "La data deve avere il formato YYYY-MM-DD.")
+//        @Size(min = 10, max = 10, message = "La data deve avere il formato YYYY-MM-DD.")
         LocalDate data,
         @NotBlank(message = "Il campo \"stato del viaggio\" deve essere IN_PROGRAMMA, IN_CORSO o COMPLETATO.")
         StatoViaggio statoViaggio
